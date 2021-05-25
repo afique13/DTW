@@ -3,9 +3,10 @@ import numpy as np
 import librosa
 import IPython.display 
 from IPython.display import Image
+import librosa.display
 
-y, sr = librosa.load('ONTIVA.COM_-J_T-beri-penjelasan_-memohon-maaf-320K.wav')
-plt.plot(y)
-plt.xlabel('Time (samples)')
-plt.ylabel('Amplitude')
-IPython.display.Audio(data=y, rate=sr)
+y, sr = librosa.load('Audio File\JnTx1.5.wav')
+y_harmonic, y_percussive = librosa.effects.hpss(y)
+
+mfcc = librosa.feature.mfcc(y=y_percussive, sr=sr, n_mfcc=13)
+print(mfcc)
