@@ -17,6 +17,6 @@ def dtw(s, t):
             dtw_matrix[i, j] = cost + last_min
     return dtw_matrix
 
-x = [1,2,3]
-y = [2,2,2,3,4]
-print(dtw(x,y))
+# x = [1,2,3]
+# y = [2,2,2,3,4]
+# print(dtw(x,y))
