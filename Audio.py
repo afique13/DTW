@@ -37,5 +37,5 @@ z = np.amax(mfcc3, axis=1)
 x_matrix = np.array(dtw(x,y))
 y_matrix = np.array(dtw(x,z))
 
-print(x_matrix[len(x_matrix)-1,13])
-print(y_matrix[len(y_matrix)-1,13])
+print(x_matrix[x_matrix.shape[0]-1,x_matrix.shape[1]-1])
+print(y_matrix[y_matrix.shape[0]-1,y_matrix.shape[1]-1])
